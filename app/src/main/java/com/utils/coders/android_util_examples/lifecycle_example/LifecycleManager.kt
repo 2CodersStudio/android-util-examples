@@ -29,7 +29,6 @@ class LifecycleManager(private val lifeCycleDelegate: LifecycleInterface) : Appl
     override fun onActivityResumed(activity: Activity?) {
         if (!isInForeground) {
             isInForeground = true
-            //THINGS
             lifeCycleDelegate.onAppForegrounded(activity)
         }
 
